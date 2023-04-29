@@ -1,0 +1,438 @@
+@import url('https://fonts.googleapis.com/css?family=M+PLUS+Rounded+1c:400,700|Philosopher:400,400i,700,700i&subset=cyrillic');
+
+/*
+font-family: 'M PLUS Rounded 1c', sans-serif;
+font-family: 'Philosopher', sans-serif;
+*/
+
+html {
+ 	height: 100%;
+}
+
+body {
+ 	margin: 0;
+ 	padding: 0;
+  	width: 100%;
+	font-family: 'Century Gothic', sans-serif;
+}
+
+body::-webkit-scrollbar { width: 0; }
+
+/* СКРЫТЫЕ БЛОКИ */
+
+a {
+	cursor: pointer;
+	text-decoration: none;
+}
+
+.hidden_menu {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	text-align: center;
+	margin: 0;
+	padding: 0;
+	background: rgba(0,0,0,0.9);
+	position: fixed;
+	left: -100vw;
+	top: 0;
+	z-index: 2;
+	height: 100vh;
+	width: 100%;
+	border: none;
+	transition: .5s;
+	overflow: hidden;
+}
+
+.hidden_menu > a {
+	font-size: 35pt;
+	color: #53a9cc;
+	margin: 3vh;
+	padding: 3vh;
+	transition: .5s;
+	cursor: pointer;
+	text-decoration: none;
+}
+
+.hidden_menu > a:hover {
+	text-shadow: 2px 3px 1px white;
+}
+
+.cross {
+	position: absolute;
+	top: 2%;
+	right: 2%;
+	width: 30px;
+	cursor: pointer;
+}
+
+.hidden_info {
+	width: 100%;
+	height: 100vh;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	text-align: justify;
+	position: fixed;
+	top: 0;
+	left: 100vw;
+	background: rgba(0,0,0,0.8);
+	z-index: 2;
+	border: 0;
+	padding: 0;
+	margin: 0;
+	transition: .5s;
+	overflow: hidden;
+}
+
+.hidden_info_place {
+	font-size: 40pt;
+	text-transform: uppercase;
+	color: white;
+	text-shadow: 2px 4px 1px #52aacd;
+	margin: 0;
+	padding: 0;
+}
+
+.hidden_info_country {
+	background: transparent;
+	text-transform: uppercase;
+	margin: 20px 0;
+	padding: 0;
+	font-size: 15pt;
+}
+/*
+.hidden_info>div {
+	width: 100%;
+	height: 50vh;
+	background: url(pics/zel1-2.jpg);
+	background-size: cover;
+	background-position: 50% 50%;
+	background-repeat: no-repeat;
+	border-top:5px solid #52aacd;
+	border-bottom:5px solid #52aacd;
+	max-width: 1200px;
+	position: relative;
+}
+*/
+.img {
+	width: 100vw;
+	height: 50vh;
+	background: url(pics/zel1.jpg);
+	background-repeat: no-repeat;
+	background-position: 50% 50%;
+}
+
+.info {
+	color: white;
+	max-width: 700px;
+	width: 100%;
+	font-size: 14pt;
+	border-top:5px solid #52aacd;
+	border-bottom:5px solid #52aacd;
+	background: rgba(82, 170, 205, 0.3);
+	padding: 10px;
+	margin: 20px 0;
+}
+
+/* ШАПКА */
+
+header {
+	width: inherit;
+	height: 100vh;
+	background: url(pics/header-bg.png);
+	background-size: cover;
+	background-position: 50%;
+	font-family: 'Century Gothic', sans-serif;
+	color: white;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	text-align: center;
+}
+
+.icon {
+	width: 25px;
+	margin: 0 10px 0 0;
+}
+
+.menu {
+	display: flex;
+	flex-direction: row;
+	justify-content: center;
+	align-items: center;
+	text-align: center;
+	background: #53a9cc;
+	box-shadow: 0 1px 20px rgba(0,0,0,0.5);
+	width: 100%;
+	position: fixed;
+	left: 0;
+	top: 0;
+}
+
+.nav-wrapper {
+	max-width: 700px;
+	width: 90%;
+	display: flex;
+	flex-direction: row;
+	justify-content: space-around;
+	align-items: center;
+	text-align: center;
+}
+
+.menu li {
+	list-style-type: none;
+	padding: .5vh 0;
+	transition: .5s;
+}
+
+.nav-a {
+	text-decoration: none;
+	color: white;
+	font-size: 25px;
+	margin: 0 1vw;
+	display: flex;
+	flex-direction: row;
+	justify-content: center;
+	align-items: center;
+	text-align: center;
+}
+
+.container {
+	margin: 0 0;
+	padding: 0 3%;
+}
+
+h1, h2, h3 {
+	margin-top: 0;
+	margin-bottom: 8px;
+	font-weight: 300;
+}
+
+.title {
+	font-size: 55pt;
+	color: white;
+	text-shadow: 0 5px 0px #53a9cc;
+	text-transform: uppercase;
+}
+
+h2 {
+	margin: 20px 0;
+	color: white;
+	border-radius: 6px;
+	padding: .5vh;
+	background: #53a9cc;
+	display: inline-block;
+}
+
+h3 {
+
+}
+
+section {
+	width: 100%;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	text-align: justify;
+	border-top: 5px solid #53a9cc;
+	padding: 10vh 0;
+}
+
+.country-name {
+	font-size: 60px;
+	/*text-shadow: 0.3vw 0.3vh 5px #53a9cc;*/
+	text-align: center;
+	color: black;
+	margin: 0px 0 3vh 0;
+}
+
+.places-container {
+	display: flex;
+	flex-direction: row;
+	justify-content: center;
+	align-items: center;
+	text-align: center;
+	width: 100%;
+	flex-wrap: wrap;
+	cursor: pointer;
+}
+
+.place {
+	margin: 2% 1%;
+	padding: 7px;
+	border-radius: 3px;
+	transition: 0.3s;
+}
+
+.place:hover {
+	/*background: linear-gradient(125deg,#53a9cc,#fd9cb9);*/
+	box-shadow: 0 2px 8px rgba(0, 0, 0, 0.5);
+	transform: scale(1.1);
+}
+
+.place>div {
+	width: 300px;
+	height: 300px;
+	background-position: 50% 50%;
+	background-repeat: no-repeat;
+	background-size: cover;
+	border-radius: 3px;
+	margin: 0 0 2% 0;
+}
+
+/* Зеландия */
+
+.place1>div {
+	background: url(pics/zel1.jpg);
+	background-position: 50% 50%;
+	background-repeat: no-repeat;
+	background-size: cover;
+}
+.place2>div {
+	background: url(pics/zel2.jpg);
+	background-position: 50% 50%;
+	background-repeat: no-repeat;
+	background-size: cover;
+}
+.place3>div {
+	background: url(pics/zel3.jpg);
+	background-position: 50% 50%;
+	background-repeat: no-repeat;
+	background-size: cover;
+}
+.place4>div {
+	background: url(pics/zel4.jpg);
+	background-position: 50% 50%;
+	background-repeat: no-repeat;
+	background-size: cover;
+}
+
+/* Швейцария */
+
+.place5>div {
+	background: url(pics/shv1.jpg);
+	background-position: 50% 50%;
+	background-repeat: no-repeat;
+	background-size: cover;
+}
+.place6>div {
+	background: url(pics/shv2.jpg);
+	background-position: 50% 50%;
+	background-repeat: no-repeat;
+	background-size: cover;
+}
+.place7>div {
+	background: url(pics/shv3.jpg);
+	background-position: 50% 50%;
+	background-repeat: no-repeat;
+	background-size: cover;
+}
+.place8>div {
+	background: url(pics/shv4.jpg);
+	background-position: 50% 50%;
+	background-repeat: no-repeat;
+	background-size: cover;
+}
+
+/* Исландия */
+
+.place9>div {
+	background: url(pics/isl1.jpg);
+	background-position: 50% 50%;
+	background-repeat: no-repeat;
+	background-size: cover;
+}
+.place10>div {
+	background: url(pics/isl2.jpg);
+	background-position: 50% 50%;
+	background-repeat: no-repeat;
+	background-size: cover;
+}
+.place11>div {
+	background: url(pics/isl3.jpg);
+	background-position: 50% 50%;
+	background-repeat: no-repeat;
+	background-size: cover;
+}
+.place12>div {
+	background: url(pics/isl4.jpg);
+	background-position: 50% 50%;
+	background-repeat: no-repeat;
+	background-size: cover;
+}
+
+/* Италия */
+
+.place13>div {
+	background: url(pics/it1.jpg);
+	background-position: 50% 50%;
+	background-repeat: no-repeat;
+	background-size: cover;
+}
+.place14>div {
+	background: url(pics/it2.jpg);
+	background-position: 50% 50%;
+	background-repeat: no-repeat;
+	background-size: cover;
+}
+.place15>div {
+	background: url(pics/it3.jpg);
+	background-position: 50% 50%;
+	background-repeat: no-repeat;
+	background-size: cover;
+}
+.place16>div {
+	background: url(pics/it4.jpg);
+	background-position: 50% 50%;
+	background-repeat: no-repeat;
+	background-size: cover;
+}
+
+.place>span {
+	font-size: 20pt;
+	transition: 0.3s;
+}
+
+footer {
+	display: flex;
+	flex-direction: column;
+	width: 100vw;
+	padding: 25px 0;
+	background: #53a9cc;
+	justify-content: center;
+	align-items: center;
+	text-align: center;
+}
+
+footer > span {
+	font-size: 15pt;
+	color: white;
+	margin: 15px 0;
+}
+footer > span > a {
+	color: white;
+	padding: 10px;
+	transition: .5s;
+}
+
+.text1,
+.text2 {
+	cursor: default;
+}
+
+.text2 {
+	font-weight: bold;
+	font-size: 25pt;
+	text-shadow: 3px 2px 0px rgba(0, 0, 0, 0.33);
+}
+
+footer > span > a:hover {
+	background: white;
+	color: #53a9cc;
+	font-weight: bold;
+	border-radius: 5px;
+}
